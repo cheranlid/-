@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 =============================================
-FileName: log.py
-Author: 查诚
-StudentID: 20211210004
-School: 淮北师范大学
-College: 计算机科学与技术学院
-Major: 智能科学与技术专业
-Supervisor: 李晓
 Description:
     PyQt5 日志输出工具，功能包括：
     1. 多级日志显示：支持 info/success/warning/error/debug 分级
