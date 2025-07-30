@@ -1,0 +1,216 @@
+/* ================= Main Window Styles ================= */
+QMainWindow {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    border: none;
+}
+
+/* ================= Central Widget Styles ================= */
+#centralWidget {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= Title Label ================= */
+#label_Title {
+    color: #5a3d7a;
+    font-size: 24pt;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+/* ================= Group Boxes ================= */
+QGroupBox {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    padding-top: 15px;
+    color: #343a40;
+    font-size: 11pt;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #5a3d7a;
+}
+
+/* ================= View Labels ================= */
+#label_InputView, #label_DetectView {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px dashed rgba(107, 65, 140, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    color: #495057;
+    font-size: 11pt;
+    font-weight: 500;
+}
+
+/* ================= General Labels ================= */
+QLabel {
+    color: #495057;
+    font-size: 11pt;
+    font-weight: 500;
+}
+
+/* ================= Buttons ================= */
+QPushButton {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: 'Microsoft YaHei';
+    font-weight: bold;
+    color: white;
+    font-size: 12pt;
+    min-width: 90px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+/* Load File Button */
+#pushButton_LoadFile {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8e44ad,
+        stop:1 #6c3483
+    );
+}
+
+#pushButton_LoadFile:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7d3c98,
+        stop:1 #5b2c6f
+    );
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Run/Stop Button */
+#pushButton_Run_Stop {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #e74c3c,
+        stop:1 #c0392b
+    );
+}
+
+#pushButton_Run_Stop:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #d62c1a,
+        stop:1 #a52714
+    );
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Action Buttons (Clear, Save, Export) */
+#pushButton_ClearRecord, #pushButton_SaveToDB, #pushButton_ExportAsCSV {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3498db,
+        stop:1 #2980b9
+    );
+}
+
+#pushButton_ClearRecord:hover, #pushButton_SaveToDB:hover, #pushButton_ExportAsCSV:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2980b9,
+        stop:1 #1a5276
+    );
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+QPushButton:pressed {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+QPushButton:disabled {
+    background: #e9ecef;
+    color: #adb5bd;
+    box-shadow: none;
+}
+
+/* ================= Input Controls ================= */
+QComboBox, QLineEdit, QTextEdit, QTextBrowser, QTableView {
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #495057;
+    font-size: 11pt;
+    selection-background-color: #8e44ad;
+    selection-color: white;
+}
+
+QComboBox::drop-down {
+    width: 25px;
+    border-left: 2px solid #ced4da;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #ced4da;
+    selection-background-color: #f441bf;
+    selection-color: white;
+}
+
+#textBrowser_Log {
+    font-family: "Monaco", "DejaVu Sans Mono", "Consolas", "Courier New", monospace;
+    background-color: #d9dadb;
+    color: #000000;
+    padding-right: 0;
+}
+
+/* ================= Separator Lines ================= */
+QFrame[frameShape="4"], /* HLine */
+QFrame[frameShape="5"]  /* VLine */ {
+    color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* ================= Status Bar ================= */
+QStatusBar {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #495057;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 10pt;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+/* ================= Table View ================= */
+QTableView {
+    alternate-background-color: #f8f9fa;
+    gridline-color: #e9ecef;
+}
+
+QHeaderView::section {
+    background-color: #6c3483;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+/* ================= Tool Tips ================= */
+QToolTip {
+    background-color: #5a3d7a;
+    color: white;
+    border: 1px solid #8e44ad;
+    padding: 6px 10px;
+    font-size: 10pt;
+    border-radius: 4px;
+    opacity: 240;
+}

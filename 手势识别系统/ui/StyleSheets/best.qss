@@ -1,0 +1,428 @@
+/* =========================== 主窗口 =========================== */
+/* 主窗口样式 */
+QMainWindow {
+    background-color: #f5f5f5;
+    /* 设置字体族，优先使用Segoe UI，其次微软雅黑，最后系统默认无衬线字体 */
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+/* 标题标签 - 学术风格 */
+#label_Title {
+    /* 文字样式 */
+    color: #1a365d;             /* 深海军蓝，学术标准色 */
+    font-size: 22px;            /* 稍小于原尺寸更正式 */
+    font-weight: 700;
+    text-align: center;
+    font-variant: small-caps;   /* 小型大写字母（英文适用） */
+
+    /* 背景与边框 */
+    background-color: #ffffff;   /* 纯白背景 */
+    border: 1px solid #d1d3d5;  /* 细浅灰边框 */
+    border-radius: 0;           /* 直角更正式 */
+    border-bottom: 3px solid #2c4a6d; /* 底部深蓝强调线 */
+
+    /* 间距与效果 */
+    padding: 8px;          /* 紧凑内边距 */
+}
+
+/* 学术悬停效果 */
+#label_Title:hover {
+    background-color: #ffffff;  /* 保持白色背景 */
+    border-bottom-color: #990000; /* 底部线变为深红 */
+    color: #1a365d;            /* 保持原文字色 */
+    text-decoration: none;     /* 悬停时取消下划线 */
+}
+/* =========================== 分组框 =========================== */
+/* 分组框样式 */
+QGroupBox {
+    /* 半透明白色背景(90%不透明) */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* 1像素浅黑色(12%不透明)边框 */
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    /* 10像素圆角 */
+    border-radius: 10px;
+    /* 顶部15像素内边距(为标题留空间) */
+    padding-top: 15px;
+    /* 深灰色文字 */
+    color: #343a40;
+    /* 15点字体大小 */
+    font-size: 11pt;
+}
+
+/* 分组框标题样式 */
+QGroupBox::title {
+    /* 标题从边距区域开始定位 */
+    subcontrol-origin: margin;
+    /* 距离左边10像素 */
+    left: 10px;
+    /* 左右5像素内边距 */
+    padding: 0 5px;
+    /* 加粗字体 */
+    font-weight: bold;
+    /* 紫色文字 */
+    color: #16141c;
+}
+
+
+/* =========================== 按钮 =========================== */
+/* 按钮基础样式 */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #1a5276;
+}
+
+/* 特殊按钮样式 */
+/* 运行/停止按钮的默认样式 */
+QPushButton#pushButton_Run_Stop {
+    background-color: #2ecc71;  /* 绿色 - 开始状态 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    min-width: 80px;
+    font-weight: 500;
+}
+
+/* 运行状态样式（红色停止按钮） */
+QPushButton#pushButton_Run_Stop[running="true"] {
+    background-color: #e74c3c;  /* 红色 - 停止状态 */
+}
+
+/* 悬停状态 */
+QPushButton#pushButton_Run_Stop:hover {
+    background-color: #27ae60;  /* 深绿色 - 开始状态悬停 */
+}
+
+QPushButton#pushButton_Run_Stop[running="true"]:hover {
+    background-color: #c0392b;  /* 深红色 - 停止状态悬停 */
+}
+
+/* 按下状态 */
+QPushButton#pushButton_Run_Stop:pressed {
+    background-color: #219653;  /* 更深绿色 - 开始状态按下 */
+}
+
+QPushButton#pushButton_Run_Stop[running="true"]:pressed {
+    background-color: #a53125;  /* 更深红色 - 停止状态按下 */
+}
+
+#pushButton_ClearRecord {
+    background-color: #e74c3c;
+}
+
+#pushButton_ClearRecord:hover {
+    background-color: #c0392b;
+}
+
+#pushButton_ClearRecord:pressed {
+    background-color: #922b21;
+}
+
+/* =========================== 下拉框 =========================== */
+/* 下拉框样式 */
+QComboBox {
+     /* 纯白背景 */
+    background-color: white;
+    /* 1像素浅灰色边框 */
+    border: 1px solid #a0a7b0;
+    /* 6像素圆角 */
+    border-radius: 4px;
+    /* 上下8像素，左右12像素内边距 */
+    padding: 4px 12px;
+    /* 深灰色文字 */
+    color: #1a365d;
+    font-family: "Times New Roman", "SimSun", serif;
+    /* 11点字体大小 */
+    font-size: 11pt;
+    /* 选中文本背景色为紫色 */
+    selection-background-color: #2c4a6d;
+    /* 选中文本文字为白色 */
+    selection-color: #ffffff;
+}
+
+/* 组合框下拉按钮 */
+QComboBox::drop-down {
+    /* 25像素宽度 */
+    width: 25px;
+    /* 左侧1像素浅灰色边框 */
+    border-left: 2px solid #ced4da;
+    /* 从内边距区域定位 */
+    subcontrol-origin: padding;
+    /* 位于右上角 */
+    subcontrol-position: top right;
+}
+
+/* 组合框下拉菜单 */
+QComboBox QAbstractItemView {
+    /* 1像素浅灰色边框 */
+    border: 1px solid #ced4da;
+    /* 选中项背景色为粉色 */
+    selection-background-color: #2c4a6d;
+    /* 选中项文字为白色 */
+    selection-color: #ffffff;
+}
+
+/* =========================== 文本浏览器 =========================== */
+/* 文本浏览器样式 */
+QTextBrowser {
+    /* 使用等宽字体 */
+    font-family: "Monaco", "DejaVu Sans Mono", "Consolas", "Courier New", monospace;
+    /* 浅灰色背景 #f8f9fa*/
+    background-color: #d9dadb;
+    color: #000000;
+    padding-right: 0;
+}
+
+#textBrowser_Log {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+}
+
+/* =========================== 标签 ===========================*/
+QLabel {
+    /* 基础样式 */
+    font-family: "Source Han Serif SC", "思源宋体", "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: bold;
+    /* 间距与对齐 */
+    padding: 6px 12px;
+    margin: 4px 0;
+    qproperty-alignment: AlignCenter;
+    /* 文字效果 */
+    color: #2d3748;             /* 深灰蓝色文字 */
+    letter-spacing: 0.3px;      /* 轻微字距调整 */
+}
+
+
+
+#label_ModeTag, #label_OptionTag {
+    font-weight: bold;
+    font-size: 11pt;
+    color: 0;
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 5px;
+    /* 背景与边框 */
+    border: 1px solid #d1d5db;  /* 调整为更柔和的灰色 */
+}
+/* ----------------特殊标签----------------- */
+/* 特殊标签(输入视图和检测视图) */
+QLabel#label_InputView, QLabel#label_DetectView {
+    /* 半透明白色背景(95%不透明) */
+    background-color: rgba(255, 255, 255, 0.90);
+    /* 2像素紫色(30%不透明)虚线边框 */
+    border: 2px dashed rgba(107, 65, 140, 0.3);
+    /* 10像素圆角 */
+    border-radius: 10px;
+    /* 15像素内边距 */
+    padding: 12px;
+}
+
+/* === 检测结果标签 === */
+#label_OBClass,
+#label_OBConfidence,
+#label_OBBox {
+    /* 文字样式 */
+    color: #2c3e50;  /* 深蓝灰 */
+    font-size: 13px;
+
+    /* 背景与边框 */
+    background-color: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-left: 3px solid #3498db; /* 左侧学术蓝强调 */
+
+    letter-spacing: 0.5px;
+}
+
+
+
+/* === 当前标签 === */
+#label_CurrentTag {
+    /* 文字样式 */
+    font-size: 15px;
+    color: #1a365d;
+
+    /* 背景效果 */
+    background: #f8f9fa;
+    border: 1px solid #cbd5e0;
+    border-top: 3px solid #2c4a6d; /* 顶部深蓝条 */
+
+}
+
+/* === 分类/置信度/框体标签 === */
+#label_ClassTag,
+#label_ConfidenceTag,
+#label_BoxTag {
+    /* 文字样式 */
+    font-size: 14px;
+    color: #4a5568;
+    background-color: white;
+    border: none;               /* 移除所有边框 */
+    border-bottom: 3px solid #e2e8f0;  /* 底部浅灰分割线 */
+    /* 类型标记 */
+    padding-left: 24px;
+    qproperty-indent: -15px;
+}
+
+
+
+/* === 状态指示标签 === */
+#label_Status {
+    font-size: 11px;
+    color: #718096;
+    background: transparent;
+    border-bottom: 1px dotted #cbd5e0;
+    padding: 2px 8px;
+}
+
+/* === 交互状态 === */
+QLabel:hover {
+    background-color: #ebf4ff;
+}
+
+/* === 深色模式适配 === */
+QLabel[darkMode="true"] {
+    background-color: #2d3748;
+    color: #f7fafc;
+    border-color: #4a5568;
+}
+
+
+/* =========================== 表格视图 =========================== */
+QTableView {
+    /* 基础样式 */
+    background-color: #ffffff;  /* 纯白底色 */
+    border: 1px solid #d6d6d6;  /* 浅灰边框 */
+    border-radius: 0;           /* 直角更正式 */
+    gridline-color: #e0e0e0;    /* 浅灰色网格线 */
+    outline: 0;
+
+    /* 文字样式 */
+    font-family: 'Times New Roman', 'SimSun', serif; /* 学术常用字体 */
+    font-size: 12px;
+    color: #333333;             /* 深灰文字 */
+
+    /* 选中项样式 */
+    selection-background-color: #3a5f8d;  /* 深蓝选中 */
+    selection-color: #ffffff;
+
+    /* 交替行颜色 */
+    alternate-background-color: #f5f8fa;
+}
+
+/* 表格项样式 */
+QTableView::item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+QTableView::item:hover {
+    background-color: #e6f0f7;  /* 浅蓝悬停 */
+}
+
+/* 表头样式 */
+QHeaderView::section {
+    /* 背景与文字 */
+    background-color: #2c4a6d;  /* 深蓝 */
+    color: #ffffff;
+
+    /* 间距与边框 */
+    padding: 4px 7px;
+    border: none;
+    border-right: 1px solid rgba(255,255,255,0.2);
+
+    /* 字体设置 */
+    font-family: 'Times New Roman', 'SimSun', serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;          /* 学术表格通常左对齐 */
+}
+
+/* 表格角部 */
+QTableCornerButton::section {
+    background-color: #2c4a6d;
+    border: none;
+}
+
+/* 滚动条样式 */
+QTableView QScrollBar:vertical {
+    background: #f1f1f1;
+    width: 12px;
+}
+QTableView QScrollBar::handle:vertical {
+    background: #a0a0a0;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QTableView QScrollBar::add-line:vertical,
+QTableView QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+/* =========================== 分隔线 =========================== */
+QFrame[frameShape="4"], /* HLine */
+QFrame[frameShape="5"]  /* VLine */ {
+    color: #bdc3c7;
+}
+
+/* =========================== 状态栏 =========================== */
+QStatusBar {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 12px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* =========================== 滚动条 =========================== */
+QScrollBar:vertical {
+    /* 10像素宽度 */
+    width: 10px;
+    /* 浅灰色背景 */
+    background: #3e3e3f;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 上下2像素外边距 */
+    margin: 2px 0;
+}
+
+/* 垂直滚动条滑块 */
+QScrollBar::handle:vertical {
+    /* 灰色滑块 */
+    background: #adb5bd;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 最小高度30像素 */
+    min-height: 30px;
+}
+
+/* 垂直滚动条滑块悬停状态 */
+QScrollBar::handle:vertical:hover {
+    /* 悬停时变为紫色 */
+    background: #8e44ad;
+}
+
+/* 垂直滚动条上下箭头(隐藏) */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    /* 高度为0(隐藏) */
+    height: 0;
+    /* 无背景 */
+    background: none;
+}

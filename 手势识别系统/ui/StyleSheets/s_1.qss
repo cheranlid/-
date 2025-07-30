@@ -1,0 +1,287 @@
+/* ================= 主窗口样式 ================= */
+QMainWindow {
+    /* 设置主窗口背景色为浅灰色 */
+    background-color: #f8f9fa;
+    /* 设置字体族，优先使用Segoe UI，其次微软雅黑，最后系统默认无衬线字体 */
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    /* 移除窗口边框 */
+    border: none;
+}
+
+/* ================= 中央部件样式 ================= */
+QWidget#centralWidget {
+    /* 设置半透明白色背景(85%不透明) */
+    background-color: rgba(255, 255, 255, 0.85);
+    /* 12像素圆角 */
+    border-radius: 12px;
+    /* 外边距15像素 */
+    margin: 15px;
+    /* 内边距20像素 */
+    padding: 20px;
+    /* 1像素宽的浅黑色(8%不透明)边框 */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* 添加轻微阴影效果 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= 状态栏样式 ================= */
+QStatusBar {
+    /* 半透明白色背景(90%不透明) */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 深灰色文字 */
+    color: #495057;
+    /* 顶部1像素浅黑色(10%不透明)边框 */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* 10点字体大小 */
+    font-size: 10pt;
+    /* 中等字体粗细 */
+    font-weight: 500;
+    /* 上下6像素，左右12像素的内边距 */
+    padding: 6px 12px;
+}
+
+/* ================= 分组框样式 ================= */
+QGroupBox {
+    /* 半透明白色背景(90%不透明) */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* 1像素浅黑色(12%不透明)边框 */
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    /* 10像素圆角 */
+    border-radius: 10px;
+    /* 顶部15像素内边距(为标题留空间) */
+    padding-top: 15px;
+    /* 深灰色文字 */
+    color: #343a40;
+    /* 15点字体大小 */
+    font-size: 11pt;
+}
+
+/* 分组框标题样式 */
+QGroupBox::title {
+    /* 标题从边距区域开始定位 */
+    subcontrol-origin: margin;
+    /* 距离左边10像素 */
+    left: 10px;
+    /* 左右5像素内边距 */
+    padding: 0 5px;
+    /* 加粗字体 */
+    font-weight: bold;
+    /* 紫色文字 */
+    color: #16141c;
+}
+
+/* ================= 标签样式 ================= */
+QLabel {
+    /* 深灰色文字 */
+    color: #495057;
+    /* 11点字体大小 */
+    font-size: 11pt;
+    /* 中等字体粗细 */
+    font-weight: 500;
+}
+
+/* 特殊标签(输入视图和检测视图) */
+QLabel#label_InputView, QLabel#label_DetectView {
+    /* 半透明白色背景(95%不透明) */
+    background-color: rgba(255, 255, 255, 0.90);
+    /* 2像素紫色(30%不透明)虚线边框 */
+    border: 2px dashed rgba(107, 65, 140, 0.3);
+    /* 10像素圆角 */
+    border-radius: 10px;
+    /* 15像素内边距 */
+    padding: 15px;
+}
+
+/* ================= 按钮样式 ================= */
+QPushButton {
+    /* 无边框 */
+    border: none;
+    /* 8像素圆角 */
+    border-radius: 8px;
+    /* 上下10像素，左右18像素内边距 */
+    padding: 10px 18px;
+
+    font-family: 'Microsoft YaHei';
+    /* 加粗字体 */
+    font-weight: bold;
+    /* 白色文字 */
+    color: white;
+    /* 12点字体大小 */
+    font-size: 12pt;
+    /* 最小宽度90像素 */
+    min-width: 90px;
+    /* 文字居中 */
+    text-align: center;
+    /* 轻微阴影效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 所有属性变化添加0.2秒过渡效果 */
+    transition: all 0.2s;
+}
+
+/* 加载文件按钮 */
+QPushButton#pushButton_LoadFile {
+    /* 紫色渐变背景 */
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8e44ad,  /* 左侧颜色 */
+        stop:1 #6c3483   /* 右侧颜色 */
+    );
+}
+
+/* 加载文件按钮悬停状态 */
+QPushButton#pushButton_LoadFile:hover {
+    /* 深紫色渐变背景 */
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7d3c98,
+        stop:1 #5b2c6f
+    );
+    /* 悬停时增大阴影 */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 开始/停止按钮 */
+QPushButton#pushButton_Run_Stop {
+    /* 红色渐变背景 */
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #e74c3c,
+        stop:1 #c0392b
+    );
+}
+
+/* 开始/停止按钮悬停状态 */
+QPushButton#pushButton_Run_Stop:hover {
+    /* 深红色渐变背景 */
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #d62c1a,
+        stop:1 #a52714
+    );
+    /* 悬停时增大阴影 */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 按钮按下状态 */
+QPushButton:pressed {
+    /* 按下时减小阴影 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* 向下移动1像素模拟按下效果 */
+    transform: translateY(1px);
+}
+
+/* 禁用状态按钮 */
+QPushButton:disabled {
+    /* 浅灰色背景 */
+    background: #e9ecef;
+    /* 灰色文字 */
+    color: #adb5bd;
+    /* 无阴影 */
+    box-shadow: none;
+}
+
+/* ================= 输入控件样式 ================= */
+QComboBox, QLineEdit, QTextEdit, QTextBrowser {
+    /* 纯白背景 */
+    background-color: white;
+    /* 1像素浅灰色边框 */
+    border: 1px solid #ced4da;
+    /* 6像素圆角 */
+    border-radius: 6px;
+    /* 上下8像素，左右12像素内边距 */
+    padding: 8px 12px;
+    /* 深灰色文字 */
+    color: #495057;
+    /* 11点字体大小 */
+    font-size: 11pt;
+    /* 选中文本背景色为紫色 */
+    selection-background-color: #8e44ad;
+    /* 选中文本文字为白色 */
+    selection-color: white;
+}
+
+/* 组合框下拉按钮 */
+QComboBox::drop-down {
+    /* 25像素宽度 */
+    width: 25px;
+    /* 左侧1像素浅灰色边框 */
+    border-left: 2px solid #ced4da;
+    /* 从内边距区域定位 */
+    subcontrol-origin: padding;
+    /* 位于右上角 */
+    subcontrol-position: top right;
+}
+
+/* 组合框下拉菜单 */
+QComboBox QAbstractItemView {
+    /* 1像素浅灰色边框 */
+    border: 1px solid #ced4da;
+    /* 选中项背景色为粉色 */
+    selection-background-color: #f441bf;
+    /* 选中项文字为白色 */
+    selection-color: white;
+}
+
+/* 文本浏览器 */
+QTextBrowser {
+    /* 使用等宽字体 */
+    font-family: "Monaco", "DejaVu Sans Mono", "Consolas", "Courier New", monospace;
+    /* 浅灰色背景 #f8f9fa*/
+    background-color: #d9dadb;
+    color: #000000;
+    padding-right: 0;
+}
+
+/* ================= 滚动条样式 ================= */
+QScrollBar:vertical {
+    /* 10像素宽度 */
+    width: 10px;
+    /* 浅灰色背景 */
+    background: #3e3e3f;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 上下2像素外边距 */
+    margin: 2px 0;
+}
+
+/* 垂直滚动条滑块 */
+QScrollBar::handle:vertical {
+    /* 灰色滑块 */
+    background: #adb5bd;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 最小高度30像素 */
+    min-height: 30px;
+}
+
+/* 垂直滚动条滑块悬停状态 */
+QScrollBar::handle:vertical:hover {
+    /* 悬停时变为紫色 */
+    background: #8e44ad;
+}
+
+/* 垂直滚动条上下箭头(隐藏) */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    /* 高度为0(隐藏) */
+    height: 0;
+    /* 无背景 */
+    background: none;
+}
+
+/* ================= 工具提示样式 ================= */
+QToolTip {
+    /* 深紫色背景 */
+    background-color: #5a3d7a;
+    /* 白色文字 */
+    color: white;
+    /* 1像素紫色边框 */
+    border: 1px solid #8e44ad;
+    /* 上下6像素，左右10像素内边距 */
+    padding: 6px 10px;
+    /* 10点字体大小 */
+    font-size: 10pt;
+    /* 4像素圆角 */
+    border-radius: 4px;
+    /* 设置不透明度(240/255) */
+    opacity: 240;
+}

@@ -1,0 +1,177 @@
+/* styles.qss - 应用程序样式表（优化版） */
+
+/* 主窗口样式 */
+QMainWindow {
+    background-color: #f5f5f5;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+/* 状态栏样式 */
+QStatusBar {
+    background-color: #e0e0e0;
+    color: #333333;
+    border-top: 1px solid #cccccc;
+    font-size: 10pt;
+}
+
+/* 分组框通用样式 */
+QGroupBox {
+    border: 2px solid #3a7bd5;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 15px;
+    background-color: white;
+    font-size: 11pt;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* 输入/检测视图标签样式 */
+QLabel#label_InputView, QLabel#label_DetectView {
+    border: 2px dashed #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #666666;
+    font-size: 11pt;
+}
+
+QLabel#label_InputView {
+    padding: 10px;
+}
+
+QLabel#label_DetectView {
+    padding: 10px;
+}
+
+/* 普通标签样式 */
+QLabel {
+    font-weight: bold;
+    color: #333333;
+    font-size: 11pt;
+}
+
+/* 按钮通用样式 */
+QPushButton {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+    font-size: 11pt;
+    min-width: 80px;
+}
+
+/* 加载文件按钮 */
+QPushButton#pushButton_LoadFile {
+    background-color: #3a7bd5;
+}
+
+QPushButton#pushButton_LoadFile:hover {
+    background-color: #2c5fb3;
+}
+
+QPushButton#pushButton_LoadFile:pressed {
+    background-color: #1e4a9a;
+}
+
+QPushButton#pushButton_LoadFile:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+/* 开始检测按钮 */
+QPushButton#pushButton_Run_Stop {
+    background-color: #00d2ff;
+}
+
+QPushButton#pushButton_Run_Stop:hover {
+    background-color: #00b7e0;
+}
+
+QPushButton#pushButton_Run_Stop:pressed {
+    background-color: #009cc0;
+}
+
+QPushButton#pushButton_Run_Stop:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+/* 下拉框样式 */
+QComboBox {
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 11pt;
+    font-weight: normal;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    min-width: 100px;
+    background-color: white;
+    color: #333333;
+}
+
+QComboBox:hover {
+    border: 1px solid #3a7bd5;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid #cccccc;
+}
+
+QComboBox QAbstractItemView {
+    font-family: inherit;
+    font-size: 10pt;
+    border: 1px solid #3a7bd5;
+    selection-background-color: #3a7bd5;
+    selection-color: white;
+    outline: none;
+}
+
+/* 文本浏览器样式 */
+QTextBrowser {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: white;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 10pt;
+    color: #333333;
+}
+
+/* 滚动条优化 */
+QScrollBar:vertical {
+    width: 12px;
+    background: #f0f0f0;
+}
+
+QScrollBar::handle:vertical {
+    background: #c1c1c1;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* 分隔线样式 */
+QFrame[frameShape="4"], QFrame[frameShape="5"] {
+    color: #e0e0e0;
+}
+
+/* 工具提示样式 */
+QToolTip {
+    font-family: "Microsoft YaHei";
+    font-size: 10pt;
+    border: 1px solid #3a7bd5;
+    padding: 5px;
+    background-color: white;
+    color: #333333;
+}

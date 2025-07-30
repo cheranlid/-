@@ -1,0 +1,164 @@
+/* ================= 主窗口渐变背景 ================= */
+QMainWindow {
+    background: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #d16ba5,
+        stop:0.2 #c777b9,
+        stop:0.4 #ba83ca,
+        stop:0.5 #aa8fd8,
+        stop:0.6 #9a9ae1,
+        stop:0.7 #8aa7ec,
+        stop:0.8 #79b3f4,
+        stop:0.9 #69bff8,
+        stop:1 #5ffbf1
+    );
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+/* ================= 内容区域 ================= */
+QWidget#centralWidget {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin: 15px;
+    padding: 20px;
+}
+
+/* ================= 状态栏 ================= */
+QStatusBar {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 10pt;
+}
+
+/* ================= 分组框 ================= */
+QGroupBox {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding-top: 15px;
+    color: white;
+    font-size: 11pt;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* ================= 标签 ================= */
+QLabel {
+    color: white;
+    font-size: 11pt;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+QLabel#label_InputView, QLabel#label_DetectView {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* ================= 按钮 ================= */
+QPushButton {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 12pt;
+    min-width: 90px;
+    text-align: center;
+}
+
+/* 加载文件按钮 */
+QPushButton#pushButton_LoadFile {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7d26c9,
+        stop:1 #5a00a8
+    );
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton#pushButton_LoadFile:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c1db0,
+        stop:1 #4a0090
+    );
+}
+
+/* 开始检测按钮 */
+QPushButton#pushButton_Run_Stop {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #ff2d8e,
+        stop:1 #d4006f
+    );
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton#pushButton_Run_Stop:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #e82482,
+        stop:1 #b8005d
+    );
+}
+
+/* 按钮状态 */
+QPushButton:pressed {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+QPushButton:disabled {
+    background: #cccccc;
+    color: #666666;
+    box-shadow: none;
+}
+
+/* ================= 输入控件 ================= */
+QComboBox, QLineEdit, QTextEdit, QTextBrowser {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px;
+    color: white;
+    font-size: 11pt;
+}
+
+QComboBox::drop-down {
+    width: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+QTextBrowser {
+    font-family: "Consolas", monospace;
+}
+
+/* ================= 滚动条 ================= */
+QScrollBar:vertical {
+    width: 12px;
+    background: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+/* ================= 工具提示 ================= */
+QToolTip {
+    background-color: #2d2d2d;
+    color: white;
+    border: 1px solid #3a7bd5;
+    padding: 5px;
+    font-size: 10pt;
+}

@@ -1,0 +1,214 @@
+/* 主窗口样式 */
+QMainWindow {
+    background-color: #f5f5f5;
+    /* 设置字体族，优先使用Segoe UI，其次微软雅黑，最后系统默认无衬线字体 */
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+/* 标题标签 */
+#label_Title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #3498db;  /* 改为全边框 */
+    border-radius: 5px;         /* 可选：添加圆角 */
+    background-color: #ebf5fb;   /* 可选：添加浅蓝色背景 */
+    text-align: center;         /* 确保文字居中 */
+}
+
+/* 分组框样式 */
+QGroupBox {
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+}
+
+/* 按钮基础样式 */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #1a5276;
+}
+
+/* 特殊按钮样式 */
+#pushButton_Run_Stop {
+    background-color: #27ae60;
+}
+
+#pushButton_Run_Stop:hover {
+    background-color: #219653;
+}
+
+#pushButton_Run_Stop:pressed {
+    background-color: #1e8449;
+}
+
+#pushButton_ClearRecord {
+    background-color: #e74c3c;
+}
+
+#pushButton_ClearRecord:hover {
+    background-color: #c0392b;
+}
+
+#pushButton_ClearRecord:pressed {
+    background-color: #922b21;
+}
+
+/* 下拉框样式 */
+QComboBox {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 120px;
+}
+
+QComboBox:hover {
+    border-color: #3498db;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #bdc3c7;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/down_arrow.png);
+    width: 12px;
+    height: 12px;
+}
+
+/* 文本浏览器和标签样式 */
+QTextBrowser, QLabel {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#textBrowser_Log {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+}
+
+/* 表格视图样式 */
+QTableView {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+}
+
+QTableView::item {
+    padding: 5px;
+}
+
+QHeaderView::section {
+    background-color: #6c3483;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+/* 分隔线样式 */
+QFrame[frameShape="4"], /* HLine */
+QFrame[frameShape="5"]  /* VLine */ {
+    color: #bdc3c7;
+}
+
+/* 状态栏样式 */
+QStatusBar {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 12px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* 特殊标签样式 - 检测结果 */
+#label_OBClass, #label_OBConfidence, #label_OBBox {
+    font-weight: bold;
+    color: #2c3e50;
+    border: 1px solid #3498db;
+    background-color: #ebf5fb;
+}
+
+/* 当前帧标签 */
+#label_CurrentTag {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3498db;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* 模式选择标签 */
+#label_ModeTag, #label_OptionTag {
+    font-weight: bold;
+    color: #7f8c8d;
+}
+/* ================= 滚动条样式 ================= */
+QScrollBar:vertical {
+    /* 10像素宽度 */
+    width: 10px;
+    /* 浅灰色背景 */
+    background: #3e3e3f;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 上下2像素外边距 */
+    margin: 2px 0;
+}
+
+/* 垂直滚动条滑块 */
+QScrollBar::handle:vertical {
+    /* 灰色滑块 */
+    background: #adb5bd;
+    /* 5像素圆角 */
+    border-radius: 5px;
+    /* 最小高度30像素 */
+    min-height: 30px;
+}
+
+/* 垂直滚动条滑块悬停状态 */
+QScrollBar::handle:vertical:hover {
+    /* 悬停时变为紫色 */
+    background: #8e44ad;
+}
+
+/* 垂直滚动条上下箭头(隐藏) */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    /* 高度为0(隐藏) */
+    height: 0;
+    /* 无背景 */
+    background: none;
+}
