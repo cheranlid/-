@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 =============================================
-FileName: database.py
-Author: 查诚
-StudentID: 20211210004
-School: 淮北师范大学
-College: 计算机科学与技术学院
-Major: 智能科学与技术专业
-Supervisor: 李晓
 Description:
     手势识别系统的数据库管理工具，功能包括：
     1. 数据预处理：处理空值、标准化边界框(bbox)格式
