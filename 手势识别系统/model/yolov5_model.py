@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 =============================================
-FileName: yolov5_model.py
-Author: 查诚
-StudentID: 20211210004
-School: 淮北师范大学
-College: 计算机科学与技术学院
-Major: 智能科学与技术专业
-Supervisor: 李晓
 Description:
     基于ONNX Runtime的YOLOv5手势识别推理类，功能包括：
     1. 加载ONNX格式的YOLOv5模型，支持CUDA/CPU加速
