@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 =============================================
-FileName: image.py
-Author: 查诚
-StudentID: 20211210004
-School: 淮北师范大学
-College: 计算机科学与技术学院
-Major: 智能科学与技术专业
-Supervisor: 李晓
 Description:
     图像处理工具，功能包括：
     1. 图像格式转换：支持 NumPy 数组/QPixmap 互转
