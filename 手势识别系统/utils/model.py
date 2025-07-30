@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 =============================================
-FileName: model.py
-Author: 查诚
-StudentID: 20211210004
-School: 淮北师范大学
-College: 计算机科学与技术学院
-Major: 智能科学与技术专业
-Supervisor: 李晓
 Description:
     目标检测边界框处理工具集，功能包括：
     1. 坐标格式转换：xywh<->xyxy格式互转
